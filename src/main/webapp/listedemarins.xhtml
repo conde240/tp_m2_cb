@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/tableMarins.css" />
+		
+		
+	<title>Liste des marins </title>
+</head>
+<body>
+
+
+<div id="container_demo">
+
+     
+     <a class="hiddenanchor" id="toregister"></a>
+     <a class="hiddenanchor" id="tologin"></a>
+     <div id="wrapper">
+         <div id="login" class="animate form">
+
+	<h:form>
+	
+	<h1>Liste des marins</h1>
+     
+     <div class="datagrid">
+	  <h:dataTable value="#{listeMarins.liste}" var="marin" 
+	  
+	            styleClass="employeeTable"
+                headerClass="employeeTableHeader"
+                 rowClasses="employeeTableOddRow,employeeTableEvenRow">
+        
+	  >
+	  
+	    <h:column>
+	      <f:facet name="header">ID</f:facet>
+	      <h:outputText value="#{marin.id}"/>
+	    </h:column>
+	    
+	     <h:column>
+	      <f:facet name="header">Nom</f:facet>
+	      <h:outputText value="#{marin.nom}"/>
+	    </h:column>
+	    
+        <h:column>
+	      <f:facet name="header">Prenom</f:facet>
+	      <h:outputText value="#{marin.prenom}"/>
+	    </h:column>
+	    
+	    <h:column>
+	      <f:facet name="header">Age</f:facet>
+	      <h:outputText value="#{marin.age}"/>
+	    </h:column>
+	    
+	   <!--   <h:column >
+	      <f:facet name="header">Action</f:facet>
+	       
+	       
+	        <td>
+	           <h:link   outcome="listedemarins.xhtml" >
+	           <h:graphicImage value="images/delete.png" width="16" height="16" />
+	           <f:param name="deleteId" value="#{marin.id}"/>
+	           </h:link>
+	        </td>
+	        <td>
+	             <h:link   outcome="updatemarin.xhtml" >
+	             <h:graphicImage value="images/update.png" width="16" height="16" />
+	             <f:param name="updateId" value="#{marin.id}"/>
+	             </h:link>
+	       </td>
+	        
+	      
+	     
+	    </h:column> -->
+	    
+	    
+	    
+	  </h:dataTable>
+	  </div>
+	  
+         
+	
+	</h:form>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
